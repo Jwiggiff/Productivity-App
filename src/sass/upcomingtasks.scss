@@ -1,0 +1,33 @@
+@use "./variables" as *;
+
+.upcoming-tasks {
+  display: grid;
+  gap: 1rem;
+  margin-inline: 3rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+
+  &__task {
+    display: grid;
+    align-items: center;
+    margin-left: 2rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border: 1px solid var(--text-color);
+      box-shadow: var(--shadow);
+    }
+
+    small {
+      font-size: $font-size-05;
+    }
+  }
+}

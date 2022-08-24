@@ -1,0 +1,28 @@
+.bottom-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem 3rem;
+  padding-block: 0.75rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-inset);
+  isolation: isolate;
+  position: relative;
+
+  &__indicator {
+    display: block;
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 25%;
+    border-radius: inherit;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    z-index: -1;
+  }
+
+  &__link {
+    flex: 0 0 25%;
+    text-align: center;
+  }
+}
