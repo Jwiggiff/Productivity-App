@@ -1,5 +1,4 @@
-import TopBar from "./TopBar";
-import BottomBar from "./BottomBar";
+import TopBar from "./_components/TopBar";
 import Home from "./Home";
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
     <>
       <TopBar />
       <Home />
-      <BottomBar />
     </>
   );
 }

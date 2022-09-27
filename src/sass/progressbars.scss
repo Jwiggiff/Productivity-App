@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+.progressbars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem 2rem;
+  font-size: $font-size-1;
+
+  .progress {
+    display: grid;
+    position: relative;
+    aspect-ratio: 1 / 1;
+
+    &__title {
+      display: grid;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    &__subtitle {
+      display: grid;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .progress-ring {
+      position: absolute;
+
+      &__circle {
+        --progress: 50;
+        --circumference: calc(2 * 3.1415 * 40);
+        stroke-dasharray: var(--circumference) var(--circumference);
+        stroke-dashoffset: calc(
+          var(--circumference) - var(--progress) / 100 * var(--circumference)
+        );
+
+        transition: stroke-dashoffset 0.2s;
+      }
+    }
+  }
+}
