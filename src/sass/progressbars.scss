@@ -27,6 +27,7 @@
       position: absolute;
 
       &__circle {
+        stroke: lighten($gold, 25%);
         --progress: 50;
         --circumference: calc(2 * 3.1415 * 40);
         stroke-dasharray: var(--circumference) var(--circumference);
